@@ -143,7 +143,7 @@ class WeeklyReportApp(QWidget):
         return start_of_next_week.strftime('%y.%m.%d'), end_of_next_week.strftime('%y.%m.%d')
 
     def convert_pms_links(self, text):
-        text = re.sub(r'#(\d+)', r'* PMS link (<span style="color: rgb(255, 94, 0);"><a href="https://project.rapeech.com/issues/\1" target="_blank">#\1</a></span>)', text)
+        text = re.sub(r'#(\d+)', r'* PMS link (<span style="color: rgb(255, 94, 0);"><a href="https://project.test.com/issues/\1" target="_blank">#\1</a></span>)', text)
         text = re.sub(r'\[(.*?)\]', r'<b>[\1]</b>', text)
         text = re.sub(r'^(##.*)$', r'<b>\1</b>', text, flags=re.MULTILINE)
         text = re.sub(r'(\d+)%?\s*(보류)', r'<span style="background-color: #848484; color: white; padding: 2px;"><b>\1% \2</b></span>', text)
